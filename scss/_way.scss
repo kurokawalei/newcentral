@@ -1,0 +1,375 @@
+
+@import "system";
+
+/*履歷照片*/
+
+body {
+    background: #ECFBFE;
+}
+
+#header {
+    background: #fff;
+    height: 94px;
+    .container , .row  {
+        height: inherit;
+    }
+
+    #logo {
+        margin: 0;
+    }
+}
+
+.right {
+
+    text-align: right;
+}
+
+.breadbox {
+    margin: 21px 0;
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: '>';
+    }
+
+        .breadcrumb {
+            background: transparent;
+            font-size: $font*0.8125;
+            padding: 0;
+
+        }
+
+       
+
+   
+}
+
+
+.left-main {
+
+    background: #fff;
+    padding: 40px 30px;
+
+    .data  {
+        display: inline-block;
+    }
+
+    .share-icon {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+
+    h1 {
+        display: block;
+       
+        font-size: $font*1.875;
+        margin-top: 34px;
+        border-bottom: #ccc solid 1px;
+        padding-bottom: 35px;
+      
+    }
+}
+
+
+.raiders-title {
+
+    font-size: $font*1.1875;
+
+    img {
+        margin-right: 20px;
+    }
+
+}
+
+
+.raiders-tips {
+    background: #ECFBFE;
+    padding: 16px 40px 6px 40px;
+    border: #0A65C2 solid 2px;
+    border-radius: 10px;
+    margin-top: 40px;
+    h2 {
+        font-size: $font*1;
+       
+    }
+   
+}
+
+.tag-box {
+   
+    margin: 40px 0 0 0;
+
+    ul {
+        @include ulstyle();
+
+        li {
+            display: inline-block;
+            padding: 3px 19px;
+            border:#0A65C2 solid 1px;
+            border-radius: 50vw;
+            transition: all 0.5s ease;
+            &:hover {
+                background: #0A65C2 ;
+                transition: all 0.5s ease;
+                a {
+                    color: #fff;
+                  
+                }
+            }
+
+            a {
+                font-size: $font*0.875;
+                color: #0A65C2;
+                display: block;
+                text-decoration: none;
+             
+               
+            }
+        }
+    }
+}
+
+
+.ngbox {
+
+    margin-top: 40px;
+    border:#0A65C2 solid 2px;
+    padding: 0 15px;
+
+    h3 {
+    color: #1a1a1a;
+    font-size: $font*1.6;
+   
+    margin: 35px 0;
+    display: block;
+    border-bottom: #000 solid 1px;
+    padding-bottom: 5px;
+
+    span {
+        background-color: #0068af;
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    
+    }
+
+    .step3box {
+
+        font-size: $font*1.4;
+        padding: 15px 0;
+        color: #333;
+        position: relative;
+        margin: 40px -15px 0 -15px;
+        background-color: #deeefb;
+        text-align: center;
+
+    &:before {
+     content: '';
+    width: 0;
+    border-width: 0 40px 40px;
+    border-color: transparent transparent #deeefb;
+    position: absolute;
+    top: -30px;
+    height: 0;
+    border-style: solid;
+    transform: translateX(-50%);
+    left: 50%;
+    
+        }
+
+
+    }
+
+
+    .scale-img {
+
+     
+       img {
+
+        transition: all 0.35s ease;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.35s ease;
+        }
+
+       }
+        
+    }
+
+    .ready {
+    background-color: #0068af;
+    display: block;
+    width: 23%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 3px;
+    padding: 10px 0;
+    position: relative;
+   
+    font-size: $font*1.6;
+    margin: 35px auto;
+    &:before {
+
+        width: 0;
+        border-width: 20px 25px 0;
+        border-color: #0068af transparent transparent;
+        position: absolute;
+        bottom: -20px;
+        content: '';
+        height: 0;
+    border-style: solid;
+    transform: translateX(-50%);
+    left: 50%;
+
+
+    }
+    }
+
+
+    #item-list-box {
+
+        background-color: #fff;
+        border: 1px solid #2086c6;
+        margin: 0;
+        position: relative;
+
+        i {
+    position: absolute;
+    color: #8eccea;
+    font-size: $font*4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-260%, -50%);
+    z-index: 2;
+        }
+
+        &:after {
+          
+            border-right: #000 dashed 1px;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 10.4vw;
+            content: "";
+         
+        }
+
+        &:before {
+            content: "道具清單";
+            border: 1px solid #000;
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            color: #4d4d4d;
+         
+            background-color: #fff;
+            padding: 0px 15px;
+            font-size: $font*1.2;
+        }
+        figure.imgbox {
+            padding: 10px;
+
+
+
+            & + p {
+
+                font-weight: 600;
+                margin: 0;
+
+                &+ p  {
+                    color: #0066bf;
+                    margin: 0;
+                }
+
+            } 
+        }
+
+
+        .item-left {
+            text-align: center;
+            margin-bottom: 15px;
+            align-self: center;
+
+          
+        }
+
+        .item-right {
+            text-align: center;
+            margin-bottom: 15px;
+            ul {
+                @include ulstyle();
+              
+                display: flex;
+                flex-flow: wrap;
+                li {
+                    width: 50%;
+                    padding: 0 15px;
+                    margin-bottom: 15px;
+
+                    p {
+
+                        font-size: $font*1;
+                        color: #4d4d4d;
+                        margin: 0;
+
+                        &:nth-child(2){
+                            font-weight: 600;
+                        }
+
+                        &:nth-child(3) {
+                            color: #0066bf;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .space {
+    text-align: center;
+    font-size: $font*1.2;
+    margin-top: 50px;
+    border-bottom: none;
+    }
+
+    i.fa.fa-chevron-down {
+    color: #8eccea;
+    font-size: $font*4;
+    display: block;
+    text-align: center;
+    transform: translateY(-30px);
+}
+
+    .step-bg.row {
+        background-color: #deeefb;
+        padding: 15px 0;
+
+        .step-bg-title {
+            color: #0066bf;
+            font-size: $font*2;
+            font-weight: 600;
+          
+            p {
+                font-size: $font*1;
+                margin: 0 0 30px;
+                color: #4d4d4d;
+            }
+        }
+    }
+
+    .step3-title {
+        border: 1px solid #0066bf;
+        background-color: #fff;
+        display: inline-block;
+        padding: 5px 10px;
+        color: #4d4d4d;
+        font-size: $font*1;
+    }
+
+
+
+}
