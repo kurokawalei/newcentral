@@ -452,7 +452,7 @@ body {
             width: 40px;
         }
         &:hover {
-            background: transparent;
+            background: transparent !important;
         }
         &:focus {
             outline: 0px auto -webkit-focus-ring-color ;
@@ -469,7 +469,7 @@ body {
             width: 40px;
         }
         &:hover {
-            background: transparent;
+            background: transparent !important;
         }
         &:focus {
             outline: 0px auto -webkit-focus-ring-color ;
