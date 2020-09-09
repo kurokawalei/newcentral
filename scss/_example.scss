@@ -1,0 +1,486 @@
+
+@import "system";
+
+
+
+//履歷範本
+
+
+ul#example-tab {
+
+    li {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+
+        }
+
+        a {
+
+            border-top: $word-color solid 5px;
+            border-color:$word-color  ;
+            border-bottom: none;
+          
+
+  span {
+
+    color: #6F7C8B;
+    font-size: $font*0.8125;
+
+  }
+  .name {
+      font-size: $font*1.125;
+      color: $b-color;
+      position: relative;
+      font-weight: 500;
+      i {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include mob(){
+            transform: translateY(0%);
+            top: inherit;
+            bottom: 2px;
+          }
+      }
+  }
+
+        }
+
+
+    }
+
+}
+
+
+
+#example-content {
+
+    border:$word-color solid 1px ;
+    border-top: $word-color solid 1px;
+    padding: 32px 0px;
+    @include mob(){
+        padding: 35px 0 0 0 ;
+    }
+
+    h2 {
+        color: $word-color;
+        font-weight: 300;
+        font-size: $font*1.5625;
+        border-bottom: #E0E4EB solid 1px;
+        padding: 0 40px 37px 40px;
+        span {
+    background-color: #0068af;
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    margin-right: 5px;
+        }
+
+    }
+
+    #exbox , #exbox2 , #exbox3 {
+
+        padding: 40px 40px 0 40px;
+        @include mob(){
+            padding: 40px 15px;
+        }
+
+        .center-img {
+            @include mob(){
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+       
+
+        .card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-color: transparent;
+
+            .pinky {
+                @include mob(){
+                    padding: 18px 15px 18px 0px !important;
+                }
+            }
+
+            a {
+
+                i {
+                    transform: rotate(180deg);
+                }
+
+
+                &.collapsed {
+                 
+                    i {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+          
+              
+            }
+
+
+             .card-header {
+                padding: 22px;
+                border: $word-color solid 1px;
+                border-radius: 10px;
+                background: #ECFBFE;
+
+               
+            }
+
+            #gt1  , #gt1-1 , #gt1-2 {
+
+                .card-body {
+
+                    padding: 0;
+
+                    .qa_content {
+
+                        ul.personal {
+                            position: relative;
+                            @include ulstyle();
+                            margin-top: 40px;
+    
+                            li {
+                                padding: 8px 0 8px 25px;
+                                border-bottom: #E0E4EB solid 1px;
+                                color: $b-color;
+                                span {
+                                    color: #6F7C8B;
+                                   
+                                }
+                                span.p_l {
+                                    display: inline-block;
+                                    padding-left: 80px;
+                                    @include mob(){
+                                        padding-left: 0;
+                                        display: block;
+                                        
+                                    }
+                                }
+                                span.g-data {
+                                    color: #ccc;
+                                    font-size: $font*0.875;
+                                    margin-left: 5px;
+                                }
+                            }
+                            .perpic {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                @include mob(){
+                                    position: static;
+                                    text-align: center;
+                                }
+                            }
+                        }
+    
+                        .qa-title {
+    
+                            color: $word-color;
+                            background: #ECFBFE;
+                            margin: 40px 0 34px 0;
+                            padding: 13px 25px;
+    
+                        }
+    
+    
+                    }
+
+                    .pinky {
+
+                        background: #FFEDF1;
+                        padding: 18px 55px 18px 41px;
+                        border-radius: 8px;
+    
+                    }
+
+
+                  
+
+                }
+
+
+               
+
+               
+
+
+            }
+
+            #gt2 , #gt2-1 , #gt2-2  {
+
+                .card-body {
+                    padding: 0;
+
+                    .pinky {
+                        background: #FFEDF1;
+                        padding: 18px 55px 18px 41px;
+                        margin-top: 40px;
+                        border-radius: 8px;
+                        
+                    }
+
+                   
+
+                    ul.listul-2 {
+                      padding: 34px 0px 0px 40px;
+                      list-style-type: none;
+                      @include mob(){
+                        padding: 34px 0px 0px 15px;
+                      }
+                      li {
+                          padding: 8px 0;
+                          &:first-child {
+                              padding-top:0 ;
+                          }
+                          span {
+                             color: #6F7C8B;
+                          }
+                          ul {
+                            list-style-type: decimal;
+                            padding: 0 0 0 20px;
+                            color: #6F7C8B;
+                           
+                          }
+                      }
+                    }
+
+                }
+                    
+                
+            }
+
+            #gt3 ,  #gt3-1 ,  #gt3-2 {
+
+                .card-body {
+                    padding-bottom:0 ;
+                }
+
+                .pinky {
+
+                    background: #FFEDF1;
+                    padding: 18px 55px 18px 41px;
+                    border-radius: 8px;
+
+                }
+
+                ul.listul-2 {
+                    padding: 34px 0px 0px 0;
+                    list-style-type: none;
+                    li {
+                        padding: 8px 0;
+                        &:first-child {
+                            padding-top:0 ;
+                        }
+                        span {
+                           color: #6F7C8B;
+                        }
+                        ul {
+                          list-style-type: decimal;
+                          padding: 0 0 0 20px;
+                          color: #6F7C8B;
+                         
+                        }
+                    }
+                  }
+               
+            }
+
+            #gt4 ,  #gt4-1 ,  #gt4-2 {
+
+                .card-body {
+
+                    padding: 0;
+                    margin-top: 40px;
+
+                    .pinky {
+
+                        background: #FFEDF1;
+                        padding: 18px 55px 18px 41px;
+                        margin-top: 40px;
+                        border-radius: 8px;
+
+                    }
+
+
+
+                    .listul-2 {
+                     
+                       padding: 0px 30px;
+                       list-style-type: none;
+                       margin-bottom: 25px;
+                       li{
+                           span {
+                            color: #6F7C8B;
+                           }
+                       }
+                    }
+
+                    .listul-3 {
+                     
+                        padding: 0px 30px;
+                        list-style-type: none;
+                        margin: 40px 0 40px 0;
+                        @include mob(){
+                            padding: 0 15px;
+                        }
+
+                        li{
+                            span {
+                             color: #6F7C8B;
+                            }
+                        }
+                     }
+
+
+
+
+
+                }
+
+                .qa-title {
+                    color: #0A65C2;
+    background: #ECFBFE;
+    margin: 40px 0 34px 0;
+    padding: 13px 25px;
+                }
+
+
+
+            }
+
+            #gt5 , #gt5-1  , #gt5-2 {
+
+                .card-body {
+
+                    padding: 0;
+                    margin-top: 40px;
+
+                    .pinky {
+
+                        background: #FFEDF1;
+                        padding: 18px 55px 18px 41px;
+                        margin-top: 40px;
+                        border-radius: 8px;
+
+                        &+p {
+
+                            margin-top: 25px;
+                        }
+
+                        &+ul{
+
+                            margin-top: 25px;
+                        }
+
+                        &~ul {
+                            list-style-type: none;
+                            padding: 0;
+                        }
+
+                       
+
+                    }
+
+               
+
+
+
+
+
+
+
+                }
+
+                .qa-title {
+                    color: #0A65C2;
+    background: #ECFBFE;
+    margin: 40px 0 34px 0;
+    padding: 13px 25px;
+                }
+
+
+
+            }
+
+           
+
+
+            ul.listul {
+                margin: 0;
+            }
+
+
+
+            a {
+
+                text-decoration: none;
+
+
+            .great-step-title2 {
+                font-size: $font*1.5625;
+                margin-left: 26px;
+                color: $b-color;
+                text-decoration: none;
+                font-weight: 400;
+            }
+    
+        }
+
+
+        }
+
+       
+       
+
+        .great-step-title {
+            background:$word-color;
+            border-radius: 10vw;
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            display: block;
+            text-align: center;
+            line-height: 44px;
+        }
+        
+    }
+ 
+
+
+
+
+h1.example-title {
+    text-align: center;
+    color: $b-color;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 37px;
+
+    p:first-child {
+        font-size: $font*1.5;
+        margin-bottom: 5px;
+    }
+
+    P:last-child {
+        font-size: $font*1.1875;
+    }
+
+  
+
+  
+   
+   
+
+
+}
+

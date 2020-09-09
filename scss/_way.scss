@@ -1,5 +1,8 @@
 
 @import "system";
+@import "articleRight";
+
+
 
 /*履歷照片*/
 
@@ -48,6 +51,12 @@ body {
 
     background: #fff;
     padding: 40px 30px;
+    border: #E0E4EB solid 1px;
+    border-radius: 8px;
+    color: $b-color;
+    @include mob(){
+        padding: 40px 15px;
+    }
 
     .data  {
         display: inline-block;
@@ -56,6 +65,7 @@ body {
     .share-icon {
         display: inline-block;
         margin-left: 10px;
+        cursor: pointer;
     }
 
 
@@ -88,8 +98,13 @@ body {
     border: #0A65C2 solid 2px;
     border-radius: 10px;
     margin-top: 40px;
+
     h2 {
         font-size: $font*1;
+        p {
+            font-weight: 300;
+            color: $b-color;
+        }
        
     }
    
@@ -104,6 +119,7 @@ body {
 
         li {
             display: inline-block;
+            margin-right: 5px;
             padding: 3px 19px;
             border:#0A65C2 solid 1px;
             border-radius: 50vw;
@@ -136,13 +152,19 @@ body {
     border:#0A65C2 solid 2px;
     padding: 0 15px;
 
+    .scale-img {
+        @include mob(){
+            text-align: center;
+        }
+    }
+
     h3 {
     color: #1a1a1a;
     font-size: $font*1.6;
    
     margin: 35px 0;
     display: block;
-    border-bottom: #000 solid 1px;
+    border-bottom: #1a1a1a solid 1px;
     padding-bottom: 5px;
 
     span {
@@ -191,6 +213,9 @@ body {
 
         transition: all 0.35s ease;
         transform: scale(1);
+        @include mob(){
+            margin-bottom: 15px;
+        }
         &:hover {
             transform: scale(1.1);
             transition: all 0.35s ease;
@@ -209,9 +234,14 @@ body {
     letter-spacing: 3px;
     padding: 10px 0;
     position: relative;
-   
     font-size: $font*1.6;
     margin: 35px auto;
+    @include mob(){
+     
+    width: 60%;
+    padding: 5px 15px;
+    margin: 35px auto 50px auto;
+    }
     &:before {
 
         width: 0;
@@ -224,6 +254,7 @@ body {
     border-style: solid;
     transform: translateX(-50%);
     left: 50%;
+   
 
 
     }
@@ -233,7 +264,7 @@ body {
     #item-list-box {
 
         background-color: #fff;
-        border: 1px solid #2086c6;
+        border: 1px solid #4d4d4d;
         margin: 0;
         position: relative;
 
@@ -255,20 +286,28 @@ body {
             top: 0;
             left: 10.4vw;
             content: "";
+            @include mob(){
+                display: none;
+            }
          
         }
 
         &:before {
             content: "道具清單";
-            border: 1px solid #000;
+            border: 1px solid #4d4d4d;
             position: absolute;
             top: -20px;
             left: 40px;
             color: #4d4d4d;
-         
             background-color: #fff;
             padding: 0px 15px;
             font-size: $font*1.2;
+            @include mob(){
+             
+                    left: 50%;
+                transform: translateX(-50%);
+              
+            }
         }
         figure.imgbox {
             padding: 10px;
@@ -315,13 +354,16 @@ body {
                         font-size: $font*1;
                         color: #4d4d4d;
                         margin: 0;
+                        text-align: left;
 
                         &:nth-child(2){
                             font-weight: 600;
+                            text-align: left;
                         }
 
                         &:nth-child(3) {
                             color: #0066bf;
+                            text-align: left;
                         }
                     }
                 }
@@ -368,8 +410,212 @@ body {
         padding: 5px 10px;
         color: #4d4d4d;
         font-size: $font*1;
+        @include mob(){
+            margin: 15px 0;
+        }
     }
 
 
 
 }
+
+
+.else-article {
+    background: #fff;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 34px 40px;
+    border: #E0E4EB solid 1px;
+    border-radius: 8px;
+
+
+    p {
+        text-align: center;
+        font-size: $font*1.5625;
+        color: #333333;
+
+    }
+
+.owl-nav {
+    margin-top: 0;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    .owl-prev {
+       position: absolute;
+        left: -65px;
+        margin: 0;
+        @include mob(){
+            left: -45px;
+            width: 40px;
+        }
+        &:hover {
+            background: transparent;
+        }
+        &:focus {
+            outline: 0px auto -webkit-focus-ring-color ;
+        }
+    }
+
+    .owl-next {
+       right: -75px;
+       margin: 0;
+       position: absolute;
+        transform: rotate(180deg);
+        @include mob(){
+            right: -45px;
+            width: 40px;
+        }
+        &:hover {
+            background: transparent;
+        }
+        &:focus {
+            outline: 0px auto -webkit-focus-ring-color ;
+        }
+       
+    }
+}
+
+
+
+    .item {
+
+        a {
+            text-decoration: none;
+
+            .else-title {
+                margin-top: 25px;
+                font-size: $font*1.1875;
+                 color: $b-color;
+                text-decoration: none;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+         
+               
+             }
+         
+        }
+
+    }
+
+}
+
+
+#shareaction {
+
+    .close {
+
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        background: #000;
+        border-radius: 50vw;
+        opacity: 1;
+        color: #fff;
+        padding: 5px;
+        border: #fff solid 2px;
+        text-shadow: none;
+        cursor: pointer;
+        z-index: 1;
+        span {
+            cursor: pointer;
+        }
+
+    }
+
+
+    a {
+
+
+        p {
+            font-size: $font*0.9375;
+            color: $b-color;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+
+    .col-auto {
+        padding: 0 33px;
+    }
+
+
+
+}
+
+
+.industry-box {
+    ul {
+
+
+        li {
+            padding: 40px 0;
+            border-bottom: #E0E4EB solid 1px;
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            .industry-title {
+                color: #0A65C2;
+                font-size: $font*1.5625;
+                font-weight: 300;
+               
+
+            }
+
+
+            .industry-main {
+                margin: 10% 0;
+                color: #6F7C8B;
+                font-size: $font*0.8125;
+
+            }
+
+
+
+            .downloadicon {
+                background: #FD5858;
+                border-radius: 50px;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 33px;
+                display: inline-block;
+
+                img {
+                    margin-left: 10px;
+                    transform: translateY(-2px);
+                }
+               
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
