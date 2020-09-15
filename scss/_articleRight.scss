@@ -1,5 +1,5 @@
 
-@import "system";
+
 
 //文章右邊區內容
 
@@ -13,6 +13,7 @@
     }
 
     .article-title {
+        
         font-size: $font*1.5625;
         color: $b-color;
         border-bottom: #ccc solid 1px;
@@ -25,7 +26,6 @@
        padding-top: 21px;
         li {
             margin-bottom: 20px;
-
             &:last-child {
                 margin-bottom: 0px;
             }
